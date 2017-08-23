@@ -10,7 +10,7 @@
             "email": "perminder.klair@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "2.0.*"
     },

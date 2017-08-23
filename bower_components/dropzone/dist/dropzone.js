@@ -1100,6 +1100,24 @@
           if (resizeInfo.trgHeight == null) {
             resizeInfo.trgHeight = resizeInfo.optHeight;
           }
+
+          // NL FIX
+          loadImage(
+              file,
+              function (img) {
+                  _this.emit("thumbnail", file, img.toDataURL("image/png"));
+              },
+              {
+                  maxWidth: resizeInfo.trgWidth,
+                  maxHeight: resizeInfo.trgHeight,
+                  minWidth: 100,
+                  minHeight: 100,
+                  canvas: true,
+                  orientation: true
+              }
+          );
+          return true;
+
           canvas = document.createElement("canvas");
           ctx = canvas.getContext("2d");
           canvas.width = resizeInfo.trgWidth;

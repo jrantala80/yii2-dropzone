@@ -1761,7 +1761,7 @@
 
   Dropzone._autoDiscoverFunction = function() {
     if (Dropzone.autoDiscover) {
-      return Dropzone.discover();
+      return true; //Dropzone.discover();
     }
   };
 
